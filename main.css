@@ -1,13 +1,11 @@
 /* Fixing the Clusterfuck that is ducklink's default CSS */
-body
-{
+body {
     line-height: 1.2;
     font-size: 16px;
-    overflow: hidden;
+    margin: 0;
 }
 
-p
-{
+p {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -15,39 +13,65 @@ p
     margin-right: 0;
 }
 
-@keyframes fadeIn 
-{
-    from {opacity: 0;}
-    to {opacity: 1;}
+.noOverflow {
+    overflow: hidden;
 }
 
-@keyframes fadeOut 
-{
-    from {opacity: 1;}
-    to {opacity: 0;}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-@keyframes lightBlueFade 
-{
-    from {background-color: rgba(42, 130, 235, 0.65);}
-    to {background-color: rgba(77, 177, 240, 0.7);}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
-@keyframes flickerDown 
-{ /*Try to do this in 1 second*/
-    from {height: 60%;}
-    to {height: 1%;}
+@keyframes lightBlueFade {
+    from {
+        background-color: rgba(42, 130, 235, 0.65);
+    }
+
+    to {
+        background-color: rgba(77, 177, 240, 0.7);
+    }
 }
 
-@keyframes flickerUp 
-{
-    from {height: 1%;}
-    to {height: 60%;}
+@keyframes flickerDown {
+
+    /*Try to do this in 1 second*/
+    from {
+        height: 60%;
+    }
+
+    to {
+        height: 1%;
+    }
+}
+
+@keyframes flickerUp {
+    from {
+        height: 1%;
+    }
+
+    to {
+        height: 60%;
+    }
 }
 
 /* Scanning */
-.crosshairWidth, .crosshairHeight
-{
+.crosshairWidth,
+.crosshairHeight {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -55,8 +79,7 @@ p
 }
 
 /*Positions here are just to start off*/
-.crosshairWidth
-{
+.crosshairWidth {
     border-top: 3px solid #b8b8b8;
     top: 30%;
     animation-name: searchWidth;
@@ -67,8 +90,7 @@ p
     animation-timing-function: ease-in-out;
 }
 
-.crosshairHeight
-{
+.crosshairHeight {
     border-left: 3px solid #b8b8b8;
     left: 70%;
     animation-name: searchHeight;
@@ -78,62 +100,185 @@ p
     animation-timing-function: ease-in-out;
 }
 
-@keyframes searchWidth 
-{ /*Here, we specify only the top vals*/
-    0% {top: 14%;}
-    5% {top: 67%;}
-    10% {top: 35%;}
-    15% {top: 78%;}
-    20% {top: 80%;}
-    25% {top: 95%;}
-    30% {top: 76%;}
-    35% {top: 23%;}
-    40% {top: 44%;}
-    45% {top: 50%;}
-    50% {top: 32%;}
-    55% {top: 70%;}
-    60% {top: 28%;}
-    65% {top: 56%;}
-    70% {top: 64%;}
-    75% {top: 87%;}
-    80% {top: 33%;}
-    85% {top: 40%;}
-    90% {top: 63%;}
-    95% {top: 37%;}
-    100% {top: 90%;}
+@keyframes searchWidth {
+
+    /*Here, we specify only the top vals*/
+    0% {
+        top: 14%;
+    }
+
+    5% {
+        top: 67%;
+    }
+
+    10% {
+        top: 35%;
+    }
+
+    15% {
+        top: 78%;
+    }
+
+    20% {
+        top: 80%;
+    }
+
+    25% {
+        top: 95%;
+    }
+
+    30% {
+        top: 76%;
+    }
+
+    35% {
+        top: 23%;
+    }
+
+    40% {
+        top: 44%;
+    }
+
+    45% {
+        top: 50%;
+    }
+
+    50% {
+        top: 32%;
+    }
+
+    55% {
+        top: 70%;
+    }
+
+    60% {
+        top: 28%;
+    }
+
+    65% {
+        top: 56%;
+    }
+
+    70% {
+        top: 64%;
+    }
+
+    75% {
+        top: 87%;
+    }
+
+    80% {
+        top: 33%;
+    }
+
+    85% {
+        top: 40%;
+    }
+
+    90% {
+        top: 63%;
+    }
+
+    95% {
+        top: 37%;
+    }
+
+    100% {
+        top: 90%;
+    }
 }
 
-@keyframes searchHeight 
-{ /*Specify only the left vals*/
-    0% {left: 20%;}
-    5% {left: 30%;}
-    10% {left: 57%;}
-    15% {left: 68%;}
-    20% {left: 96%;}
-    25% {left: 76%;}
-    30% {left: 43%;}
-    35% {left: 25%;}
-    40% {left: 36%;}
-    45% {left: 14%;}
-    50% {left: 50%;}
-    55% {left: 77%;}
-    60% {left: 72%;}
-    65% {left: 84%;}
-    70% {left: 64%;}
-    75% {left: 23%;}
-    80% {left: 38%;}
-    85% {left: 75%;}
-    90% {left: 43%;}
-    95% {left: 32%;}
-    100% {left: 60%;}
+@keyframes searchHeight {
+
+    /*Specify only the left vals*/
+    0% {
+        left: 20%;
+    }
+
+    5% {
+        left: 30%;
+    }
+
+    10% {
+        left: 57%;
+    }
+
+    15% {
+        left: 68%;
+    }
+
+    20% {
+        left: 96%;
+    }
+
+    25% {
+        left: 76%;
+    }
+
+    30% {
+        left: 43%;
+    }
+
+    35% {
+        left: 25%;
+    }
+
+    40% {
+        left: 36%;
+    }
+
+    45% {
+        left: 14%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    55% {
+        left: 77%;
+    }
+
+    60% {
+        left: 72%;
+    }
+
+    65% {
+        left: 84%;
+    }
+
+    70% {
+        left: 64%;
+    }
+
+    75% {
+        left: 23%;
+    }
+
+    80% {
+        left: 38%;
+    }
+
+    85% {
+        left: 75%;
+    }
+
+    90% {
+        left: 43%;
+    }
+
+    95% {
+        left: 32%;
+    }
+
+    100% {
+        left: 60%;
+    }
 }
 
-.wholeScan
-{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Images/map_zoom.png") no-repeat center center fixed; 
+.wholeScan {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://static7.campusgroups.com/upload/stevens/2024/web_upload_605627map_zoom_813221026_crop.png") no-repeat center center fixed;
     background-size: cover;
-    
-    overflow: hidden;
 
     width: 100%;
     height: 100%;
@@ -145,8 +290,7 @@ p
 
 /* I am pretty bad at CSS, so I stole a few things from Github */
 /* I think they call this OSINT or something */
-.container 
-{
+.container {
     color: white;
     display: flex;
     flex-direction: column;
@@ -159,12 +303,11 @@ p
     padding-right: 10%;
 
     height: 100%;
-    
+
     font-size: max(0.4vw, 1vh);
 }
 
-.glitch 
-{
+.glitch {
     font-size: max(5vw, 6vh);
     font-weight: bold;
     text-transform: uppercase;
@@ -175,71 +318,71 @@ p
     color: white;
 }
 
-.glitch span 
-{
+.glitch span {
     position: absolute;
     top: 0;
     left: 0;
     display: inline-block;
 }
 
-.glitch span:first-child 
-{
+.glitch span:first-child {
     animation: glitch 500ms infinite;
     clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
     transform: translate(-0.04em, -0.03em);
     opacity: 0.75;
 }
 
-.glitch span:last-child 
-{
+.glitch span:last-child {
     animation: glitch 375ms infinite;
     clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
     transform: translate(0.04em, 0.03em);
     opacity: 0.75;
 }
 
-@keyframes glitch 
-{
+@keyframes glitch {
     0% {
         text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-        0.025em 0.04em 0 #fffc00;
+            0.025em 0.04em 0 #fffc00;
     }
+
     15% {
         text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-        0.025em 0.04em 0 #fffc00;
+            0.025em 0.04em 0 #fffc00;
     }
+
     16% {
         text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-        -0.05em -0.05em 0 #fffc00;
+            -0.05em -0.05em 0 #fffc00;
     }
+
     49% {
         text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-        -0.05em -0.05em 0 #fffc00;
+            -0.05em -0.05em 0 #fffc00;
     }
+
     50% {
         text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-        0 -0.04em 0 #fffc00;
+            0 -0.04em 0 #fffc00;
     }
+
     99% {
         text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-        0 -0.04em 0 #fffc00;
+            0 -0.04em 0 #fffc00;
     }
+
     100% {
         text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
-        -0.04em -0.025em 0 #fffc00;
+            -0.04em -0.025em 0 #fffc00;
     }
 }
 
-.subfont
-{
+.subfont {
     font-family: "Rubik Glitch", system-ui;
     font-size: calc(12px + 3em);
     color: rgba(237, 209, 71, 0.8);
 }
 
-.button 
-{
+.button {
     position: relative;
     padding: 16px 30px;
     font-family: "Verdana";
@@ -255,15 +398,13 @@ p
     z-index: 1;
 }
 
-.button:hover 
-{
+.button:hover {
     color: #fff;
     border: 2px solid rgba(0, 0, 0, 0);
     box-shadow: 0 0 0px var(--color);
 }
 
-.button::before 
-{
+.button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -276,111 +417,343 @@ p
     transition: 0.5s;
 }
 
-.button:hover::before 
-{
-transform: scale(1);
-transition-delay: 0.5s;
-box-shadow: 0 0 10px var(--color),
-    0 0 30px var(--color),
-    0 0 60px var(--color);
+.button:hover::before {
+    transform: scale(1);
+    transition-delay: 0.5s;
+    box-shadow: 0 0 10px var(--color), 0 0 30px var(--color), 0 0 60px var(--color);
 }
 
-.button span 
-{
-position: absolute;
-background: var(--color);
-pointer-events: none;
-border-radius: 2px;
-box-shadow: 0 0 10px var(--color),
-    0 0 20px var(--color),
-    0 0 30px var(--color),
-    0 0 50px var(--color),
-    0 0 100px var(--color);
-transition: 0.5s ease-in-out;
-transition-delay: 0.25s;
+.button span {
+    position: absolute;
+    background: var(--color);
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--color),
+        0 0 20px var(--color),
+        0 0 30px var(--color),
+        0 0 50px var(--color),
+        0 0 100px var(--color);
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.25s;
 }
 
-.button:hover span 
-{
-opacity: 0;
-transition-delay: 0s;
+.button:hover span {
+    opacity: 0;
+    transition-delay: 0s;
 }
 
 .button span:nth-child(1),
-.button span:nth-child(3) 
-{
-width: 40px;
-height: 4px;
+.button span:nth-child(3) {
+    width: 40px;
+    height: 4px;
 }
 
 .button:hover span:nth-child(1),
-.button:hover span:nth-child(3) 
-{
-transform: translateX(0);
+.button:hover span:nth-child(3) {
+    transform: translateX(0);
 }
 
 .button span:nth-child(2),
-.button span:nth-child(4) 
-{
-width: 4px;
-height: 40px;
+.button span:nth-child(4) {
+    width: 4px;
+    height: 40px;
 }
 
 .button:hover span:nth-child(1),
-.button:hover span:nth-child(3) 
-{
-transform: translateY(0);
+.button:hover span:nth-child(3) {
+    transform: translateY(0);
 }
 
-.button span:nth-child(1) 
-{
-top: calc(50% - 2px);
-left: -50px;
-transform-origin: left;
+.button span:nth-child(1) {
+    top: calc(50% - 2px);
+    left: -50px;
+    transform-origin: left;
 }
 
-.button:hover span:nth-child(1) 
-{
-left: 50%;
+.button:hover span:nth-child(1) {
+    left: 50%;
 }
 
-.button span:nth-child(3) 
-{
-top: calc(50% - 2px);
-right: -50px;
-transform-origin: right;
+.button span:nth-child(3) {
+    top: calc(50% - 2px);
+    right: -50px;
+    transform-origin: right;
 }
 
-.button:hover span:nth-child(3)
- {
-right: 50%;
+.button:hover span:nth-child(3) {
+    right: 50%;
 }
 
-.button span:nth-child(2) 
-{
-left: calc(50% - 2px);
-top: -50px;
-transform-origin: top;
+.button span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: -50px;
+    transform-origin: top;
 }
 
-.button:hover span:nth-child(2) 
-{
-top: 50%;
+.button:hover span:nth-child(2) {
+    top: 50%;
 }
 
-.button span:nth-child(4) 
-{
-left: calc(50% - 2px);
-bottom: -50px;
-transform-origin: bottom;
+.button span:nth-child(4) {
+    left: calc(50% - 2px);
+    bottom: -50px;
+    transform-origin: bottom;
 }
 
-.button:hover span:nth-child(4 ) 
-{
-bottom: 50%;
+.button:hover span:nth-child(4) {
+    bottom: 50%;
 }
 
-.btnDiv
-{
+.btnDiv {
     margin-top: calc(40px + 5vh);
+}
+
+/* Basic Info Page */
+/* .darkBackground
+{
+width: 100%;
+min-height: 100vh;
+background: rgb(0,0,24);#2596be
+background: linear-gradient(313deg, rgba(0,0,24,1) 0%, rgba(0,74,121,1) 9%, rgba(1,34,55,1) 19%, rgba(0,8,13,1) 23%, rgba(0,22,36,1) 28%, rgba(1,68,110,1) 31%, rgba(0,75,122,1) 38%, rgba(0,0,0,1) 45%, rgba(0,31,56,1) 51%, rgba(0,38,68,1) 55%, rgba(0,47,83,1) 60%, rgba(0,34,60,1) 68%, rgba(0,42,75,1) 73%, rgba(0,67,116,1) 84%, rgba(0,11,29,1) 100%);
+} */
+
+.darkBackground {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    font-size: max(0.4vw, 1vh);
+}
+
+.infoDiv {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-size: max(0.4vw, 1vh);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Got help from GPT lmao */
+.mirror-text {
+    font-size: 7em;
+    color: white;
+    font-family: "Fira Code";
+    font-weight: 800;
+    animation: spawnIn 3s;
+    padding-bottom: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mirror-text1::after {
+    content: "Basic Info";
+    color: transparent;
+    display: flex;
+    -webkit-background-clip: text;
+    transform: rotateX(180deg);
+    background-image: linear-gradient(180deg, rgba(37, 116, 236, .0) 10%, #156aa3);
+}
+
+.mirror-text2::after {
+    content: "About SCDT";
+    color: transparent;
+    display: flex;
+    -webkit-background-clip: text;
+    transform: rotateX(180deg);
+    background-image: linear-gradient(180deg, rgba(37, 116, 236, .0) 10%, #156aa3);
+}
+
+@keyframes spawnIn {
+    from {
+        transform: translate(-500px, 0px)
+    }
+
+    to {
+        transform: translate(0px, 0px)
+    }
+}
+
+.logo1 {
+    height: 20%;
+    width: 20%;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 3em;
+}
+
+.infoPic {
+    font-size: 3.5em;
+    margin-right: 0.8em;
+    padding: 0.3em;
+
+    max-width: 1.25em;
+    max-height: 1.25em;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    animation: glowBlue2 .08s ease-in-out infinite alternate;
+}
+
+.infoText {
+    color: white;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.infoText a {
+    color: white;
+}
+
+.infoText span, .infoText div, .infoText a {
+    font-size: 3em;
+}
+
+@keyframes glowBlue {
+    from {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.92),
+      0 0 30px rgba(202,228,225,0.34),
+      0 0 12px rgba(34,162,201,0.52),
+      0 0 21px rgba(34,162,201,0.92),
+      0 0 34px rgba(34,162,201,0.78),
+      0 0 54px rgba(34,162,201,0.92);
+    }
+    to {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.98),
+      0 0 30px rgba(202,228,225,0.42),
+      0 0 12px rgba(34,162,201,0.58),
+      0 0 22px rgba(34,162,201,0.84),
+      0 0 38px rgba(34,162,201,0.88),
+      0 0 60px rgba(34,162,201,1);
+    }
+}
+
+@keyframes glowBlue2 {
+    from {
+      box-shadow:
+      0 0 6px rgba(202,228,225,0.46),
+      0 0 30px rgba(202,228,225,0.17),
+      0 0 12px rgba(34,162,201,0.26),
+      0 0 21px rgba(34,162,201,0.46),
+      0 0 34px rgba(34,162,201,0.39),
+      0 0 54px rgba(34,162,201,0.46);
+    }
+    to {
+      box-shadow:
+      0 0 6px rgba(202,228,225,0.49),
+      0 0 30px rgba(202,228,225,0.21),
+      0 0 12px rgba(34,162,201,0.29),
+      0 0 22px rgba(34,162,201,0.42),
+      0 0 38px rgba(34,162,201,0.44),
+      0 0 60px rgba(34,162,201,0.5);
+    }
+}
+
+.infoText span {
+    color: #c6e2ff;
+    animation: glowBlue .08s ease-in-out infinite alternate;
+    padding-right: 0.5em;
+    text-align: right;
+
+    display: block;
+}
+
+.infoCover {
+    min-width: 40%;
+}
+
+/* Idea for this came from a guy on Web Dev Reddit */
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+.innerAlignCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glowBorder {
+    --color1: rgba(141, 223, 255, 0.1);
+    --color2: rgb(141, 223, 255, 1);
+    
+	border: 0.35rem solid;
+	border-image: conic-gradient(from var(--angle), var(--color2), var(--color1) 0.1turn, var(--color1) 0.15turn, var(--color2) 0.25turn) 30;
+	animation: borderRotate 3s linear infinite forwards;
+
+    min-width: 50%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.contentSplit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.blackLock {
+    max-width: 30em;
+    max-height: 30em;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1em;
+
+    animation: glowBlue2 .08s ease-in-out infinite alternate;
+}
+
+@media (max-width: 450px) {
+    .glowBorder {
+        padding-left: max(2%, 10px);
+        padding-right: max(2%, 10px);
+    }
+
+    .contentSplit {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 800px) {
+    .maxBorder {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .maxBorder {
+        max-width: 50%;
+    }
+}
+
+.lowerFont {
+    font-size: 2em !important;
+    padding-top: 0.5em;
 }
