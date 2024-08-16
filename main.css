@@ -5,12 +5,26 @@ body {
     margin: 0;
 }
 
+* {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
 p {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
+}
+
+a {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+img {
+    margin-bottom: 0;
 }
 
 .noOverflow {
@@ -528,7 +542,7 @@ background: linear-gradient(313deg, rgba(0,0,24,1) 0%, rgba(0,74,121,1) 9%, rgba
     padding-top: 5%;
     padding-bottom: 2%;
     font-size: max(0.4vw, 1vh);
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -619,49 +633,53 @@ background: linear-gradient(313deg, rgba(0,0,24,1) 0%, rgba(0,74,121,1) 9%, rgba
     color: white;
 }
 
-.infoText span, .infoText div, .infoText a {
+.infoText span,
+.infoText div,
+.infoText a {
     font-size: 3em;
 }
 
 @keyframes glowBlue {
     from {
-      text-shadow:
-      0 0 6px rgba(202,228,225,0.92),
-      0 0 30px rgba(202,228,225,0.34),
-      0 0 12px rgba(34,162,201,0.52),
-      0 0 21px rgba(34,162,201,0.92),
-      0 0 34px rgba(34,162,201,0.78),
-      0 0 54px rgba(34,162,201,0.92);
+        text-shadow:
+            0 0 6px rgba(202, 228, 225, 0.92),
+            0 0 30px rgba(202, 228, 225, 0.34),
+            0 0 12px rgba(34, 162, 201, 0.52),
+            0 0 21px rgba(34, 162, 201, 0.92),
+            0 0 34px rgba(34, 162, 201, 0.78),
+            0 0 54px rgba(34, 162, 201, 0.92);
     }
+
     to {
-      text-shadow:
-      0 0 6px rgba(202,228,225,0.98),
-      0 0 30px rgba(202,228,225,0.42),
-      0 0 12px rgba(34,162,201,0.58),
-      0 0 22px rgba(34,162,201,0.84),
-      0 0 38px rgba(34,162,201,0.88),
-      0 0 60px rgba(34,162,201,1);
+        text-shadow:
+            0 0 6px rgba(202, 228, 225, 0.98),
+            0 0 30px rgba(202, 228, 225, 0.42),
+            0 0 12px rgba(34, 162, 201, 0.58),
+            0 0 22px rgba(34, 162, 201, 0.84),
+            0 0 38px rgba(34, 162, 201, 0.88),
+            0 0 60px rgba(34, 162, 201, 1);
     }
 }
 
 @keyframes glowBlue2 {
     from {
-      box-shadow:
-      0 0 6px rgba(202,228,225,0.46),
-      0 0 30px rgba(202,228,225,0.17),
-      0 0 12px rgba(34,162,201,0.26),
-      0 0 21px rgba(34,162,201,0.46),
-      0 0 34px rgba(34,162,201,0.39),
-      0 0 54px rgba(34,162,201,0.46);
+        box-shadow:
+            0 0 6px rgba(202, 228, 225, 0.46),
+            0 0 30px rgba(202, 228, 225, 0.17),
+            0 0 12px rgba(34, 162, 201, 0.26),
+            0 0 21px rgba(34, 162, 201, 0.46),
+            0 0 34px rgba(34, 162, 201, 0.39),
+            0 0 54px rgba(34, 162, 201, 0.46);
     }
+
     to {
-      box-shadow:
-      0 0 6px rgba(202,228,225,0.49),
-      0 0 30px rgba(202,228,225,0.21),
-      0 0 12px rgba(34,162,201,0.29),
-      0 0 22px rgba(34,162,201,0.42),
-      0 0 38px rgba(34,162,201,0.44),
-      0 0 60px rgba(34,162,201,0.5);
+        box-shadow:
+            0 0 6px rgba(202, 228, 225, 0.49),
+            0 0 30px rgba(202, 228, 225, 0.21),
+            0 0 12px rgba(34, 162, 201, 0.29),
+            0 0 22px rgba(34, 162, 201, 0.42),
+            0 0 38px rgba(34, 162, 201, 0.44),
+            0 0 60px rgba(34, 162, 201, 0.5);
     }
 }
 
@@ -686,9 +704,9 @@ background: linear-gradient(313deg, rgba(0,0,24,1) 0%, rgba(0,74,121,1) 9%, rgba
 }
 
 @keyframes borderRotate {
-	100% {
-		--angle: 420deg;
-	}
+    100% {
+        --angle: 420deg;
+    }
 }
 
 .innerAlignCenter {
@@ -700,10 +718,10 @@ background: linear-gradient(313deg, rgba(0,0,24,1) 0%, rgba(0,74,121,1) 9%, rgba
 .glowBorder {
     --color1: rgba(141, 223, 255, 0.1);
     --color2: rgb(141, 223, 255, 1);
-    
-	border: 0.35rem solid;
-	border-image: conic-gradient(from var(--angle), var(--color2), var(--color1) 0.1turn, var(--color1) 0.15turn, var(--color2) 0.25turn) 30;
-	animation: borderRotate 3s linear infinite forwards;
+
+    border: 0.35em solid;
+    border-image: conic-gradient(from var(--angle), var(--color2), var(--color1) 0.1turn, var(--color1) 0.15turn, var(--color2) 0.25turn) 30;
+    animation: borderRotate 3s linear infinite forwards;
 
     min-width: 50%;
     padding-top: 2%;
@@ -739,6 +757,11 @@ background: linear-gradient(313deg, rgba(0,0,24,1) 0%, rgba(0,74,121,1) 9%, rgba
     .contentSplit {
         flex-direction: column;
     }
+
+    .mobileMargins {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
 
 @media (min-width: 800px) {
@@ -756,4 +779,98 @@ background: linear-gradient(313deg, rgba(0,0,24,1) 0%, rgba(0,74,121,1) 9%, rgba
 .lowerFont {
     font-size: 2em !important;
     padding-top: 0.5em;
+}
+
+/* Sidebar from Flaticon bc I can't draw */
+.sidebarBtn {
+    cursor: pointer;
+    width: 4%;
+    height: auto;
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 5;
+
+    opacity: 0.75;
+}
+
+.sidebarBtnExpanded {
+    left: max(20%, 250px);
+}
+
+@media (max-width: 500px) {
+    .sidebarBtn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    width: 240px;
+    left: -300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    font-size: max(0.4vw, 1vh);
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    /* Don't wanna mess with animations bc then we'll have to attach classes and reset and all that fun stuff */
+    transition: all 1s ease;
+
+    z-index: 5;
+}
+
+.sidebar div {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    animation: glowBlue .08s ease-in-out infinite alternate;
+    
+    width: 100%;
+    font-size: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    
+    color: #ffffff;
+    font-size: 3em;
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    transition: all .5s ease;
+
+    padding: 8%;
+    padding-left: 3%;
+}
+
+.sidebar a span {
+    padding-left: 7%;
+}
+
+.sidebar a:hover {
+    --color1: rgba(141, 223, 255, 0.1);
+    --color2: rgb(141, 223, 255, 1);
+
+    border: 0.1em solid;
+    border-image: conic-gradient(from var(--angle), var(--color2), var(--color1) 0.1turn, var(--color1) 0.15turn, var(--color2) 0.25turn) 15;
+    animation: borderRotate 3s linear infinite forwards;
+}
+
+.sidebar a.active {
+    color: #c6e2ff;
+    animation: glowBlue2 .08s ease-in-out infinite alternate;
 }

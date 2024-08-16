@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <!--Don't paste this part into Ducklink - it's already been done for you. -->
         <link rel="stylesheet" href="./main.css">
+        <script src="./main.js"></script>
     </head>
     <body>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,25 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=IBM+Plex+Sans:wght@300&family=Roboto+Slab&family=Rubik+Glitch&display=swap" rel="stylesheet">
         
+        <!-- Sidebar -->
+        <img src="https://static7.campusgroups.com/upload/stevens/2024/web_upload_605627sidebar_815204046_crop.png" class="sidebarBtn" onclick="rotate(this);"/>
+        <div class="sidebar" id="sidebar">
+            <div>PAGES</div>
+            <a href="https://ducklink.stevens.edu/SCDT/main/"> <!-- Assign active tag to current page -->
+                <span>🌐</span>                
+                <span>Main</span>
+            </a>
+            <a class="active">
+                <span>💻</span>
+                <span>Info</span>
+            </a>
+            <a>
+                <span>🛠️</span>
+                <span>Coming Soon...</span>
+            </a>
+        </div>
+        <!-- End Sidebar -->
+
         <div class="darkBackground">
             <div class="infoDiv">
                 <div class="glowBorder">
@@ -80,14 +101,14 @@
                         About SCDT
                     </div>
                     <div class="infoItem">
-                        <div class="infoText">
+                        <div class="infoText mobileMargins">
                             <span>Introduction</span> 
                             <div class="lowerFont">
                                 Hello there, and welcome to SCDT! We quite literally steal flags and break things. Our club participates in monthly/bi-monthly CTFs (although we're trying to see if we could do more this year), give talks on CyberSec concepts and exploits, and goof around a bit because that's half the fun when it comes to security. Also we watch Youtube Shorts of people parkouring in Minecraft. Don't ask why.
                             </div>
                         </div>
                     </div>
-                    <div class="infoItem">
+                    <div class="infoItem mobileMargins">
                         <div class="infoText">
                             <span>Can I sponsor you?</span> 
                             <div class="lowerFont">
@@ -99,5 +120,7 @@
             </div>
 
         </div>
+        <!-- Sidebar -->
+        
     </body>
 </html>

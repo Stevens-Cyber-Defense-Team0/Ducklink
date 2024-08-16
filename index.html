@@ -1,13 +1,34 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<!-- You do not import this into Ducklink -->
 		<link rel="stylesheet" href="./main.css">
+		<script src="./main.js"></script>
 	</head>
 	<body>
 		<!--I know this is bad programming but Ducklink is awfully restrictive with where you can place HTML so we're doing our best-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Roboto+Slab&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+		<!-- Sidebar -->
+        <img src="https://static7.campusgroups.com/upload/stevens/2024/web_upload_605627sidebar_815204046_crop.png" class="sidebarBtn" onclick="rotate(this);"/>
+        <div class="sidebar" id="sidebar">
+            <div>PAGES</div>
+            <a class="active">         <!-- Assign active tag to current page -->
+                <span>🌐</span>                
+                <span>Main</span>
+            </a>
+            <a href="https://ducklink.stevens.edu/SCDT/basic-info/">
+                <span>💻</span>
+                <span>Info</span>
+            </a>
+            <a>
+                <span>🛠️</span>
+                <span>Coming Soon...</span>
+            </a>
+        </div>
+        <!-- End Sidebar -->
 
 		<!--Crosshair divs; have no purpose in text-->
 		<div class="wholeScan noOverflow">
