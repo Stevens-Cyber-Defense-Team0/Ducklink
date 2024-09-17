@@ -1,4 +1,8 @@
 /* Fixing the Clusterfuck that is ducklink's default CSS */
+
+/* Did you know that Campus Groups/Ducklink doesn't actually check for file extensions? Crazy, I know. */
+/* Thought I'd might throw you a lil' fun fact because CSS is boring */
+
 body {
     line-height: 1.2;
     font-size: 16px;

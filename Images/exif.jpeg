@@ -1,0 +1,9 @@
+%Image::ExifTool::UserDefined = (
+    'Image::ExifTool::Exif::Main' => {
+        0xd001 => {
+            Name => 'Password',
+            Writable => 'string',
+            WriteGroup => 'IFD0',
+        }
+    }
+)              # Perl code from https://stackoverflow.com/questions/10833928/custom-exif-tags
